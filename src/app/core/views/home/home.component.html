@@ -1,1 +1,15 @@
-<p>home works!</p>,
+<ng-container *ngIf="user.name; else who">
+  <main class="d-flex flex-column align-items-center justify-content-center">
+    <h2>Bienvenido {{ user.name }}</h2>
+
+    <p>Se te antoja un jugo?</p>
+
+    <button mat-raised-button color="accent" (click)="clearUser()">
+      Olvidarme
+    </button>
+  </main>
+</ng-container>
+
+<ng-template #who>
+  <h2>No te conozco :[</h2>
+</ng-template>

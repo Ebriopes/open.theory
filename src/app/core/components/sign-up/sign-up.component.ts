@@ -42,6 +42,8 @@ export class SignInComponent {
       localStorage.setItem('user', jsonUserInfo);
 
       this.router.navigate(['/home']);
+    } else {
+      console.log('Contraseña Incorrecta');
     }
   }
 }

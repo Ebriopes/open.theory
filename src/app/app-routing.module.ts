@@ -9,6 +9,11 @@ const routes: Routes = [
         (m) => m.LoginComponent
       ),
   },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./core/views/home/home.component').then((m) => m.HomeComponent),
+  },
   { path: '**', redirectTo: '/login' },
 ];
 

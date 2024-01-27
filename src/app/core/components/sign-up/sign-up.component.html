@@ -1,0 +1,58 @@
+<form [formGroup]="signUpForm">
+  <h3>Regístrate</h3>
+
+  <section class="d-flex flex-column">
+    <mat-form-field>
+      <mat-label for="name">Nombre:</mat-label>
+      <input
+        matInput
+        formControlName="name"
+        type="text"
+        name="name"
+        id="name"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label for="last-name">Apellido paterno:</mat-label>
+      <input
+        matInput
+        formControlName="lastName"
+        type="text"
+        name="last-name"
+        id="last-name"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label for="second-last-name">Apellido materno:</mat-label>
+      <input
+        matInput
+        formControlName="secondName"
+        type="text"
+        name="second-last-name"
+        id="second-last-name"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label for="pass">Contraseña:</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        type="password"
+        name="pass"
+        id="pass"
+      />
+    </mat-form-field>
+
+    <button
+      [disabled]="tries > 3"
+      mat-raised-button
+      color="accent"
+      (click)="signUp()"
+    >
+      Send
+    </button>
+  </section>
+</form>
